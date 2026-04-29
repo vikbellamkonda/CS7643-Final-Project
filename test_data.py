@@ -23,8 +23,8 @@ TICKERS = [
 ]
 
 #16 years of data provides almost 4000 trading days for each stock
-START_DATE = "2010-01-01"
-END_DATE = "2026-04-27"
+START_DATE = "2000-01-01"
+END_DATE = "2020-12-31"
 #local file to save work so you dont have to download from yahoo all the time
 CACHE_FILE = "stock_data.pkl"
 
