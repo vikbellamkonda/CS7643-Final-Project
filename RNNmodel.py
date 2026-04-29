@@ -1,5 +1,5 @@
 """
-model.py
+RNNmodel.py
 --------
 Vanilla RNN for realized volatility forecasting.
 
