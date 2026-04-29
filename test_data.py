@@ -68,7 +68,7 @@ def prepare_data(force_download=False):
 # ==========================================
 # 3. PYTORCH DATASET CLASS
 # ==========================================
-class Dataset(Dataset):
+class VolatilityDataset(Dataset):
     def __init__(self, returns_df, target_df, lookback=60):
         self.lookback = lookback #how maany days of history the AI sees (for now 60 days)
         self.num_stocks = returns_df.shape[1]#num of stocks = 99
@@ -106,7 +106,7 @@ class Dataset(Dataset):
 if __name__ == "__main__":
     returns, targets = prepare_data()
     # Create Dataset (Default 60-day lookback)
-    dataset = Dataset(returns, targets, lookback=60)
+    dataset = VolatilityDataset(returns, targets, lookback=60)
     # Create DataLoader
     loader = DataLoader(dataset, batch_size=64, shuffle=True)
     # Sanity Check: Test one batch
